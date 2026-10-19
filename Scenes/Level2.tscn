@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://4qk3lh15s0hu" path="res://Scenes/gate.tscn" id="9_1je60"]
 [ext_resource type="PackedScene" uid="uid://58qekv2t83yl" path="res://Scenes/contract.tscn" id="10_62f1r"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4u3k"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ejprb"]
 texture = ExtResource("2_n3cqh")
 1:0/0 = 0
 2:0/0 = 0
@@ -1194,7 +1194,7 @@ texture = ExtResource("2_n3cqh")
 [sub_resource type="TileSet" id="TileSet_70df5"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 6
-sources/0 = SubResource("TileSetAtlasSource_p4u3k")
+sources/0 = SubResource("TileSetAtlasSource_ejprb")
 
 [node name="Level2" type="Node2D" unique_id=1485470951]
 
