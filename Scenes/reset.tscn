@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://r6e8x3riugpb"]
+
+[ext_resource type="Script" uid="uid://b017c82frwa41" path="res://Code/reset.gd" id="1_pldob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7acu"]
+size = Vector2(1000, 11.9)
+
+[node name="Reset" type="Area2D" unique_id=1078819752]
+collision_mask = 2
+script = ExtResource("1_pldob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=546780756]
+position = Vector2(268, 241.5)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_k7acu")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=2028957947]
+z_index = -1
+position = Vector2(-2, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c6cufy50rpw58"]
+
+[ext_resource type="Script" uid="uid://kkl8fgl2ss08" path="res://Code/CrystalVase.gd" id="1_sqnkd"]
+[ext_resource type="Texture2D" uid="uid://bpy4j7hf51y1d" path="res://Assets/Rusty Crate.png" id="2_id7js"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_id7js"]
+size = Vector2(30, 30)
+
+[node name="CrystalVase" type="Area2D" unique_id=82264156]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_sqnkd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=626813775]
+shape = SubResource("RectangleShape2D_id7js")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=819547502]
+texture = ExtResource("2_id7js")
+
+[node name="Label" type="Label" parent="." unique_id=409393725]
+offset_left = -86.0
+offset_top = -56.0
+offset_right = 97.0
+offset_bottom = -33.0
+text = "Try pressing \"E\" on this."
+
+[node name="CrystalVase" type="Node2D" parent="." unique_id=100340872]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

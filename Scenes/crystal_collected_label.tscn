@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://deni4og01bf8r"]
+
+[ext_resource type="Script" uid="uid://cmmydm7spajwb" path="res://Code/crystal_collected_label.gd" id="1_yxpdq"]
+
+[node name="CrystalCollectedLabel" type="Node2D" unique_id=1328133768]
+script = ExtResource("1_yxpdq")
+
+[node name="CrystalCollected" type="Label" parent="." unique_id=118385418]
+z_index = 2
+offset_left = -61.0
+offset_top = -17.0
+offset_right = 73.0
+offset_bottom = 6.0
+text = "Crystal Collected!"
+
+[node name="CrystalCollectTimer" type="Timer" parent="." unique_id=123630436]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="CrystalCollectTimer" to="." method="_on_crystal_collect_timer_timeout"]

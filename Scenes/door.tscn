@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://brtxvp4p2h6ti"]
+
+[ext_resource type="Texture2D" uid="uid://bmj5v28f28oqh" path="res://Assets/door.png" id="1_p0e35"]
+[ext_resource type="Script" uid="uid://bdf73mrht5qgp" path="res://Code/door.gd" id="2_fahql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8rlfv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
+size = Vector2(10.75, 419.25)
+
+[node name="TriggerZone" type="Area2D" unique_id=531658417]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("2_fahql")
+
+[node name="Label" type="Label" parent="." unique_id=700974852]
+offset_left = -77.0
+offset_top = 73.0
+offset_right = 84.0
+offset_bottom = 96.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=852274593]
+position = Vector2(-19, 44)
+shape = SubResource("RectangleShape2D_8rlfv")
+
+[node name="Door" type="StaticBody2D" parent="." unique_id=134421877]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1407084845]
+position = Vector2(0, -152.375)
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="Sprite2D" type="Sprite2D" parent="Door/CollisionShape2D" unique_id=2012723194]
+position = Vector2(8, 169.375)
+scale = Vector2(0.75, 1.171875)
+texture = ExtResource("1_p0e35")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

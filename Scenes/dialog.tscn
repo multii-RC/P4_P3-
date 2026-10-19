@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cdva7gb5nyn8k"]
+
+[ext_resource type="Script" uid="uid://cbiswn86v0bae" path="res://Code/dialog.gd" id="1_edf0l"]
+[ext_resource type="Texture2D" uid="uid://bknslohhg1phg" path="res://Assets/icon.svg" id="2_87kay"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jawjq"]
+
+[node name="Dialog" type="Area2D" unique_id=389799286]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_edf0l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1892830333]
+scale = Vector2(0.140625, 0.140625)
+texture = ExtResource("2_87kay")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1447207170]
+shape = SubResource("RectangleShape2D_jawjq")
+
+[node name="Label" type="Label" parent="." unique_id=1633464417]
+offset_left = -97.0
+offset_top = -52.0
+offset_right = 2.0
+offset_bottom = -18.0
+theme_override_font_sizes/font_size = 8
+text = "Press action to continue"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
