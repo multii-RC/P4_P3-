@@ -13,7 +13,7 @@ func _on_body_entered(body: Node2D) -> void:
 #the player need to press "E" to interact with the next level gate
 func _input(event: InputEvent) -> void:
 	if bodyInside and Input.is_action_just_pressed("Interact"):
-		get_tree().change_scene_to_file(GameManager.currentLevel)
+		get_tree().change_scene_to_file("res://Scenes/Level2.tscn")
 		print("next level")
 	else:
 		return
