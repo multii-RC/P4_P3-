@@ -1225,7 +1225,7 @@ position = Vector2(-376, -305)
 [node name="CrystalCollectedLabel" parent="." unique_id=1328133768 instance=ExtResource("8_62f1r")]
 
 [node name="Gate" parent="." unique_id=1769824833 instance=ExtResource("9_1je60")]
-position = Vector2(6, -7)
+position = Vector2(263, 32)
 collision_layer = 8
 collision_mask = 2
 
