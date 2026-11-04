@@ -5,11 +5,11 @@ extends Area2D
 @export var bossAtkSpd: float
 @export var bossDefense: float
 @export var bossDamage: int
+@export var bossActive: bool 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	bossActive = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
