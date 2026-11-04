@@ -174,3 +174,7 @@ shape = SubResource("RectangleShape2D_mtuhs")
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=282260912]
 active = false
 tree_root = SubResource("AnimationNodeStateMachine_nmvex")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1997958049]
+offset_right = 4.0
+offset_bottom = 27.0

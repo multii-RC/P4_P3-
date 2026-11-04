@@ -9,3 +9,6 @@ Task List
 		
 		
 Plan is to use tutorials online to implement it and learn from those
+
+
+Variable jump, stack overflow

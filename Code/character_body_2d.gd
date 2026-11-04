@@ -3,10 +3,7 @@ extends CharacterBody2D
 #player stats
 @export var SPEED = 150.0
 @export var JUMP_VELOCITY = -350.0
-@export var playerHealth: int
-@export var playerDefense: int
-@export var playerAtk: float
-@export var playerLuck: float
+
 
 func _ready() -> void:
 	GameManager.player_speed_changed.connect(speed_change)

@@ -1,5 +1,12 @@
 extends Node
 
+#Player stats
+var playerHealth: int 
+var playerBaseHealth: int = 100
+var playerDefense: int
+var playerAttack: float
+var playerLuck: float
+
 #Updating crystal totals
 signal crystals_changed(manaCrystals)
 var manaCrystals: int
@@ -11,7 +18,11 @@ var stat_change: int
 
 func _ready() -> void:
 	manaCrystals = 0
-
+	playerHealth = playerBaseHealth
+	playerDefense = 2
+	playerAttack = 10
+	playerLuck = 10
+	
 #every crystal update goes through this
 func add_crystal(value):
 	manaCrystals += value

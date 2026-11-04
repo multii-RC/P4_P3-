@@ -2,6 +2,7 @@ extends Area2D
 
 #Boss stats that are variable
 @export var bossHealth: int
+var bossBaseHealth = 100
 @export var bossAtkSpd: float
 @export var bossDefense: float
 @export var bossDamage: int
@@ -15,6 +16,11 @@ signal bossKilled
 func _ready() -> void:
 	bossActive = false
 	$AnimatedSprite2D.play("active")
+	bossHealth = bossBaseHealth
+	bossAtkSpd = 1
+	bossDefense = 5
+	bossDamage = 30
+	bossLuck = 5.31459
 	
 func _on_door_door_open() -> void:
 	bossActive = true

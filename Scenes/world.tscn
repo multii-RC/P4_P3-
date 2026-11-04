@@ -1205,9 +1205,6 @@ sources/0 = SubResource("TileSetAtlasSource_5v1tr")
 [node name="World" type="Node2D" unique_id=848515882]
 
 [node name="player" parent="." unique_id=264278443 instance=ExtResource("1_k7acu")]
-playerHealth = 20
-playerDefense = 1
-playerAtk = 5.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=54550132]
 visibility_layer = 15
