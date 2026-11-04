@@ -5,6 +5,7 @@ var bodyInside = false
 
 func _ready() -> void:
 	bossDead = false
+	$AnimatedSprite2D.play("notActive")
 	
 #detecting player
 func _on_body_entered(body: Node2D) -> void:
@@ -24,4 +25,4 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _on_boss_1_boss_killed() -> void:
 	bossDead = true
-	$AnimatedSprite2D.play("default")
+	$AnimatedSprite2D.play("active")

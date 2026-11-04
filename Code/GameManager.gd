@@ -3,6 +3,7 @@ extends Node
 #Updating crystal totals
 signal crystals_changed(manaCrystals)
 var manaCrystals: int
+var player: CharacterBody2D
 
 #updating stats
 signal player_speed_changed(stat_change)

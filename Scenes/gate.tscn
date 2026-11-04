@@ -128,7 +128,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_dt0r1")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt0r1")
+}],
+"loop": 1,
+"name": &"notActive",
 "speed": 5.0
 }]
 
@@ -141,8 +149,7 @@ shape = SubResource("CircleShape2D_nmvex")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1455222424]
 position = Vector2(0.0015182495, -0.74031067)
 sprite_frames = SubResource("SpriteFrames_nmvex")
-frame = 10
-frame_progress = 0.9583609
+animation = &"active"
 speed_scale = 10.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

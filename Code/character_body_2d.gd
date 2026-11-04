@@ -9,6 +9,7 @@ extends CharacterBody2D
 
 func _ready() -> void:
 	GameManager.player_speed_changed.connect(speed_change)
+	GameManager.player = self
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
