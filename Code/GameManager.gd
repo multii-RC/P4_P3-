@@ -30,7 +30,7 @@ func _ready() -> void:
 	manaCrystals = 0
 	playerHealth = playerBaseHealth
 	playerDefense = 2
-	playerAttack = 10
+	playerAttack = 15
 	playerLuck = 10
 	
 #every crystal update goes through this
