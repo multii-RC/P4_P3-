@@ -30,8 +30,8 @@ Short introduction of your game.
 ---
 
 ## Coursework Submission Links
-- **Presentation Slides:** (https://youtu.be/BrDJ8sOpZ9w) 
-- **Gameplay Video:** (https://youtu.be/BrDJ8sOpZ9w)
-- **Game Design Document (GDD):** (https://docs.google.com/document/d/1Q6YZbyyrRrxfcEcHnIq4l24zRZg8dZeueZ--Dz3ArPU/edit?usp=sharing) (All changes is shown in different color)
+- **Presentation Slides:** [Slides](https://youtu.be/BrDJ8sOpZ9w) 
+- **Gameplay Video:** [Game Demo](https://youtu.be/BrDJ8sOpZ9w)
+- **Game Design Document:** [GDD](https://docs.google.com/document/d/1Q6YZbyyrRrxfcEcHnIq4l24zRZg8dZeueZ--Dz3ArPU/edit?usp=sharing) (All changes is shown in different color)
 
 ---
