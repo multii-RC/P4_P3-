@@ -12,7 +12,7 @@ func _on_body_entered(body: Node2D) -> void:
 	bodyInside = true
 	print("body enetered")
 
-#the player need to press "E" to interact with the next level gate
+#if the boss is beaten, let the player move to next level
 func _input(event: InputEvent) -> void:
 	if bodyInside and bossDead and Input.is_action_just_pressed("Interact"):
 		get_tree().change_scene_to_file("res://Scenes/Level2.tscn")
