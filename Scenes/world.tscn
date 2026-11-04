@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://d1nv81qnyx84k"]
 
-[ext_resource type="Script" uid="uid://degykp0cpnfky" path="res://Scenes/world.gd" id="1_ikia7"]
 [ext_resource type="PackedScene" uid="uid://wql0xxtgd1g" path="res://Scenes/player.tscn" id="1_k7acu"]
 [ext_resource type="Texture2D" uid="uid://bs0qpl23v3cg3" path="res://Assets/Ground_rocks.png" id="3_o06y3"]
 [ext_resource type="PackedScene" uid="uid://brtxvp4p2h6ti" path="res://Scenes/door.tscn" id="5_5v1tr"]
@@ -11,6 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://4qk3lh15s0hu" path="res://Scenes/gate.tscn" id="9_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://c6cufy50rpw58" path="res://Scenes/CrystalVase.tscn" id="10_0fj1v"]
 [ext_resource type="PackedScene" uid="uid://dweetj5yscwqr" path="res://Scenes/boss_1.tscn" id="10_ikia7"]
+
+[sub_resource type="GDScript" id="GDScript_0fj1v"]
+script/source = "extends Node2D
+
+
+func _on_player_die() -> void:
+	get_tree().reload_current_scene()
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5v1tr"]
 texture = ExtResource("3_o06y3")
@@ -1204,7 +1211,7 @@ physics_layer_0/collision_mask = 6
 sources/0 = SubResource("TileSetAtlasSource_5v1tr")
 
 [node name="World" type="Node2D" unique_id=848515882]
-script = ExtResource("1_ikia7")
+script = SubResource("GDScript_0fj1v")
 
 [node name="player" parent="." unique_id=264278443 instance=ExtResource("1_k7acu")]
 
@@ -1228,7 +1235,7 @@ position = Vector2(-216, -94)
 
 [node name="Dialog" parent="." unique_id=389799286 instance=ExtResource("7_o06y3")]
 position = Vector2(35, 51)
-dialog = Array[String](["Welcome to the world of death and destruction.", "You will need to collect Mana Crystals to do various things here.", "The first of which will be opening this door here.", "Go find TWO Mana Crystals and come back here to move on.", "I've heard that they can be found in high places in this area.", "Or stuck to the bottom of platforms."])
+dialog = Array[String](["Welcome to the world of death and destruction.", "You will need to collect Mana Crystals to do various things here.", "The first of which will be unlocking the cage in your way.", "Go find THREE Mana Crystals and come back here to move on.", "I've heard that they can be found in high places in this area.", "Or stuck to the bottom of platforms.", "Once the cage is unlocked attack the enemy by smashing your body into it."])
 
 [node name="Reset" parent="." unique_id=1078819752 instance=ExtResource("9_0fj1v")]
 
