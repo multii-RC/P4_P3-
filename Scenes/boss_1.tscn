@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bpw6jm5yojr47" path="res://Code/boss_1.gd" id="1_bcsvb"]
 [ext_resource type="Texture2D" uid="uid://d3ai7k2alu0tk" path="res://Assets/Animation4.png" id="2_ms1kr"]
-[ext_resource type="Script" uid="uid://bux05ay6kfp4m" path="res://Scenes/projectile.gd" id="3_ms1kr"]
-[ext_resource type="Texture2D" uid="uid://bg22cbr8okcx3" path="res://Assets/dead_squirrel-removebg-preview.png" id="4_q8p7u"]
+[ext_resource type="PackedScene" uid="uid://dek42om4idmh5" path="res://Scenes/enemyProjectile.tscn" id="3_ms1kr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7yui6"]
 atlas = ExtResource("2_ms1kr")
@@ -153,12 +152,11 @@ size = Vector2(55, 77)
 states/StateMachine/node = SubResource("AnimationNodeStateMachine_bcsvb")
 states/StateMachine/position = Vector2(387.33334, 99.55556)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nmvex"]
-
 [node name="Boss1" type="Area2D" unique_id=1494061611]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_bcsvb")
+enemyProjectile = ExtResource("3_ms1kr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=218623318]
 position = Vector2(252.00002, 23.999996)
@@ -174,14 +172,4 @@ shape = SubResource("RectangleShape2D_mtuhs")
 active = false
 tree_root = SubResource("AnimationNodeStateMachine_nmvex")
 
-[node name="Projectile" type="Area2D" parent="." unique_id=342365839]
-collision_layer = 4
-collision_mask = 2
-script = ExtResource("3_ms1kr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Projectile" unique_id=1812064359]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_q8p7u")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Projectile" unique_id=1249479278]
-shape = SubResource("CircleShape2D_nmvex")
+[node name="enemyProjectile" parent="." unique_id=211635875 instance=ExtResource("3_ms1kr")]

@@ -8,7 +8,7 @@ extends Area2D
 var bossActive: bool 
 signal bossKilled
 
-@export var projectile: PackedScene
+@export var enemyProjectile: PackedScene
 
 func _ready() -> void:
 	bossActive = false
@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Attack"):
-		var newProjectile = projectile.instantiate() as Node2D
+		var newProjectile = enemyProjectile.instantiate() as Node2D
 		get_tree().current_scene.add_child(newProjectile)
 		newProjectile.global_position = global_position
 		newProjectile.look_at(GameManager.player.global_position)

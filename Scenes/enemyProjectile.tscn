@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dek42om4idmh5"]
+
+[ext_resource type="Script" uid="uid://bux05ay6kfp4m" path="res://Code/projectile.gd" id="1_ibebl"]
+[ext_resource type="Texture2D" uid="uid://bg22cbr8okcx3" path="res://Assets/dead_squirrel-removebg-preview.png" id="2_gjudp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nmvex"]
+
+[node name="EnemyProjectile" type="Area2D" unique_id=211635875]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_ibebl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1547735528]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_gjudp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1686461324]
+shape = SubResource("CircleShape2D_nmvex")
