@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var playerHealth: int
 @export var playerDefense: int
 @export var playerAtk: float
+@export var playerLuck: float
 
 func _ready() -> void:
 	GameManager.player_speed_changed.connect(speed_change)

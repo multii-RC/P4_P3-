@@ -7,6 +7,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nmvex"]
 size = Vector2(18, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtuhs"]
+
 [node name="player" type="CharacterBody2D" unique_id=264278443]
 collision_layer = 2
 collision_mask = 3
@@ -32,3 +34,8 @@ text = "Mana Crystals:"
 script = ExtResource("3_fkybt")
 
 [node name="PlayerPosition" type="Marker2D" parent="Camera2D" unique_id=2125389147]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1359948797]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1296914548]
+shape = SubResource("RectangleShape2D_mtuhs")
