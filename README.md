@@ -26,6 +26,7 @@ Short introduction of your game.
 
 - Start over button doesn't work
 - text is hard to read in browser (not sure exactly haow to fix)
+- 2nd level may not work right now, Only figured out level 1
 ---
 
 ## Coursework Submission Links
