@@ -7,10 +7,20 @@ var playerDefense: int
 var playerAttack: float
 var playerLuck: float
 
+#boss stats
+var bossAtkSpd: float
+var bossDefense: float
+var bossDamage: int
+var bossLuck: float
+var bossHealth: int
+
+
 #Updating crystal totals
 signal crystals_changed(manaCrystals)
 var manaCrystals: int
 var player: CharacterBody2D
+
+var projectile: Area2D
 
 #updating stats
 signal player_speed_changed(stat_change)
@@ -30,4 +40,6 @@ func add_crystal(value):
 	
 func player_stat_change(stat_change):
 	player_speed_changed.emit(stat_change)
+	
+
 	

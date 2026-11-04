@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var SPEED = 150.0
 @export var JUMP_VELOCITY = -350.0
 
+signal hit
 
 func _ready() -> void:
 	GameManager.player_speed_changed.connect(speed_change)
@@ -29,4 +30,8 @@ func _physics_process(delta: float) -> void:
 #contract speed change implementation
 func speed_change(new_value: int):
 	SPEED -= SPEED * (new_value * .1)
-	
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if GameManager.projectile:
+		GameManager.playerHealth -= (GameManager.bossDamage - GameManager.playerDefense)
+		print("Projectile hit Player")
