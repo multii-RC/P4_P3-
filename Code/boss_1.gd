@@ -5,12 +5,16 @@ extends Area2D
 @export var bossAtkSpd: float
 @export var bossDefense: float
 @export var bossDamage: int
-@export var bossActive: bool 
+var bossActive: bool 
+signal bossKilled
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	bossActive = false
+	
+func _on_door_door_open() -> void:
+	bossActive = true
+	print("Boss active")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if bossHealth <= 0 :
+		bossKilled.emit()

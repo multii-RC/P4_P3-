@@ -2,13 +2,14 @@ extends Area2D
 
 #want to be able to set cost values for new doors if I add them
 @export var doorCost: int
+signal doorOpen
 
 #door popup to tell the player the cost, when next to it
 @onready var doorLabel: Label = $Label
 func _ready() -> void:
 	doorLabel.visible = false
 	doorLabel.text = "You need " + str(doorCost) + " Crystals!"
-
+	
 #Going through door, checks cost, if not enough, enables the popup
 func _on_body_entered(body: Node2D) -> void:
 	print("player entered")
@@ -17,6 +18,10 @@ func _on_body_entered(body: Node2D) -> void:
 		$Door.queue_free()
 		GameManager.add_crystal(-doorCost)
 		queue_free()
+		
+		#send signal to activate boss
+		doorOpen.emit()
+		
 	else:
 		print("Not Enough Mana Crystals, you need " + str(doorCost))
 		doorLabel.visible = true

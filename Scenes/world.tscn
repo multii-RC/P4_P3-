@@ -1252,4 +1252,6 @@ bossAtkSpd = 1.0
 bossDefense = 10.0
 bossDamage = 5
 
+[connection signal="doorOpen" from="Door" to="Boss1" method="_on_door_door_open"]
 [connection signal="body_exited" from="Gate" to="Gate" method="_on_body_exited"]
+[connection signal="bossKilled" from="Boss1" to="Gate" method="_on_boss_1_boss_killed"]
