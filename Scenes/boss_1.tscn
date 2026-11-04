@@ -139,6 +139,8 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mtuhs"]
 
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nmvex"]
+
 [node name="Boss1" type="Area2D" unique_id=1494061611]
 script = ExtResource("1_bcsvb")
 
@@ -151,3 +153,9 @@ frame_progress = 0.4666619
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=953676077]
 shape = SubResource("RectangleShape2D_mtuhs")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=282260912]
+active = false
+tree_root = SubResource("AnimationNodeStateMachine_nmvex")
+
+[node name="Cage" type="Sprite2D" parent="." unique_id=811177310]
