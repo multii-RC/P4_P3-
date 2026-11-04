@@ -1,14 +1,36 @@
-# P4_P3+
+# Project 4: My Amazing Platformer
 
-Task List
-: Lore and story: Lots of Progress, need to implement 
-: Boss: Found filler asset, and have idea
-	Coding is really behind: The current focus
-:Fighting on player side: 
-		Coding is really behind: The current focus
-		
-		
-Plan is to use tutorials online to implement it and learn from those
+![Godot Version](https://img.shields.io/badge/Godot-4.x-blue?logo=godot-engine&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-PC%20/%20Web-green)
+
+**Developed by: Ryan Carney
 
 
-Variable jump, stack overflow
+Short introduction of your game.
+
+---
+
+## How to Play
+- **Play in Browser:** [Click here to play on itch.io](https://multilifestyles.itch.io/p4-platformer)
+
+
+---
+
+### Asset Credits & Attributions
+
+- **Visual Assets:**
+
+---
+
+## Known Issues
+
+- Start over button doesn't work
+- text is hard to read in browser (not sure exactly haow to fix)
+---
+
+## Coursework Submission Links
+- **Presentation Slides:** (https://youtu.be/BrDJ8sOpZ9w) 
+- **Gameplay Video:** (https://youtu.be/BrDJ8sOpZ9w)
+- **Game Design Document (GDD):** (https://docs.google.com/document/d/1Q6YZbyyrRrxfcEcHnIq4l24zRZg8dZeueZ--Dz3ArPU/edit?usp=sharing) (All changes is shown in different color)
+
+---
