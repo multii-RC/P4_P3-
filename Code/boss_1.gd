@@ -13,12 +13,12 @@ signal bossKilled
 @onready var cooldown: Timer = $Cooldown
 
 @onready var healthBar: TextureProgressBar = $HealthBar
-@onready var healthBarValue: Label = $HealthBar/HealthValue
+
+
 
 func _ready() -> void:
 	bossActive = false
 	healthBar.visible = false
-	healthBarValue.visible = false
 	$AnimatedSprite2D.play("active")
 	bossBaseHealth = 100
 	GameManager.bossHealth = bossBaseHealth
@@ -28,25 +28,25 @@ func _ready() -> void:
 	GameManager.bossLuck = 5.31459
 	
 	
-	
+#activate the boss and release his cage
 func _on_door_door_open() -> void:
 	bossActive = true
 	print("Boss active")
 	healthBar.visible = true
-	healthBarValue.visible = true
 	if bossActive:
 		cooldown.wait_time = GameManager.bossAtkSpd
 		cooldown.start()
 		
-
+#boss death
 func _process(delta: float) -> void:
-	if GameManager.bossHealth <= 0 :
+	if bossActive and GameManager.bossHealth <= 0 :
 		bossKilled.emit()
 		healthBar.queue_free()
-		healthBarValue.queue_free()
+		bossActive = false
+		cooldown.stop()
 	
 
-
+#boss attack loop
 func _on_timer_timeout() -> void:
 	var newProjectile = enemyProjectile.instantiate() as Node2D
 	get_tree().current_scene.add_child(newProjectile)
@@ -55,7 +55,7 @@ func _on_timer_timeout() -> void:
 	print("Boss Attack")
 
 
-
+#player can attack boos by entering hitbox
 func _on_body_entered(body: Node2D) -> void:
 	if GameManager.player:
 		GameManager.bossHealth -= (GameManager.playerAttack - GameManager.bossDefense)

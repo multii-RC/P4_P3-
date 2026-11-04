@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c3wlxtyq631js"]
 
 [ext_resource type="Script" uid="uid://dhjjp5y4dcojl" path="res://Code/key.gd" id="1_dhq75"]
+[ext_resource type="Texture2D" uid="uid://c6uumn4ie214f" path="res://Assets/Star03.png" id="2_gljsd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nmvex"]
 radius = 6.0
@@ -12,5 +13,8 @@ script = ExtResource("1_dhq75")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1741585183]
 shape = SubResource("CircleShape2D_nmvex")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=706671703]
+texture = ExtResource("2_gljsd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

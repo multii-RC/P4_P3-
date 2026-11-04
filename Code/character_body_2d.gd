@@ -4,11 +4,12 @@ extends CharacterBody2D
 @export var SPEED = 150.0
 @export var JUMP_VELOCITY = -350.0
 
-signal hit
+signal die
 
 func _ready() -> void:
 	GameManager.player_speed_changed.connect(speed_change)
 	GameManager.player = self
+	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -31,7 +32,15 @@ func _physics_process(delta: float) -> void:
 func speed_change(new_value: int):
 	SPEED -= SPEED * (new_value * .1)
 
+#when player gets hit take damage
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if GameManager.projectile:
 		GameManager.playerHealth -= (GameManager.bossDamage - GameManager.playerDefense)
 		print("Projectile hit Player")
+		
+		
+#player dies
+func _process(delta: float) -> void:
+	if GameManager.playerHealth <= 0:
+		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
+		die.emit()
