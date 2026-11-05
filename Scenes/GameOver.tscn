@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgqkkkter5023"]
 
-[ext_resource type="Script" uid="uid://cs5oa2napdpvu" path="res://Scenes/button.gd" id="1_m5628"]
+[ext_resource type="Script" uid="uid://cs5oa2napdpvu" path="res://Code/button.gd" id="1_m5628"]
 
 [node name="GameOver" type="Node2D" unique_id=1659049344]
 

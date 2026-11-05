@@ -11,14 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://c6cufy50rpw58" path="res://Scenes/CrystalVase.tscn" id="10_0fj1v"]
 [ext_resource type="PackedScene" uid="uid://dweetj5yscwqr" path="res://Scenes/boss_1.tscn" id="10_ikia7"]
 
-[sub_resource type="GDScript" id="GDScript_0fj1v"]
-script/source = "extends Node2D
-
-
-func _on_player_die() -> void:
-	get_tree().reload_current_scene()
-"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5v1tr"]
 texture = ExtResource("3_o06y3")
 1:0/0 = 0
@@ -1211,7 +1203,6 @@ physics_layer_0/collision_mask = 6
 sources/0 = SubResource("TileSetAtlasSource_5v1tr")
 
 [node name="World" type="Node2D" unique_id=848515882]
-script = SubResource("GDScript_0fj1v")
 
 [node name="player" parent="." unique_id=264278443 instance=ExtResource("1_k7acu")]
 
