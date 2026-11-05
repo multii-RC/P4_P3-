@@ -6,27 +6,19 @@
 **Developed by: Ryan Carney
 
 
-Short introduction of your game.
+Do you like deep lore that you can explore while fighting through dark fantasy worlds. Play my game where  you manage a very limited resource, while progressing through harder enemies and puzzles while signing sketchy contracts.
 
 ---
 
 ## How to Play
 - **Play in Browser:** [Click here to play on itch.io](https://multilifestyles.itch.io/p4-platformer)
 
-
----
-
-### Asset Credits & Attributions
-
-- **Visual Assets:**
-
 ---
 
 ## Known Issues
 
 - Start over button doesn't work
-- text is hard to read in browser (not sure exactly haow to fix)
-- 2nd level may not work right now, Only figured out level 1
+- text is hard to read, I think just because of the font size, but I haven't messed with scaling really (not sure exactly how to fix)
 ---
 
 ## Coursework Submission Links
