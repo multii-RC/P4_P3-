@@ -22,7 +22,7 @@ func _ready() -> void:
 	$AnimatedSprite2D.play("active")
 	bossBaseHealth = 100
 	GameManager.bossHealth = bossBaseHealth
-	GameManager.bossAtkSpd = 2
+	GameManager.bossAtkSpd = 1.5
 	GameManager.bossDefense = 5
 	GameManager.bossDamage = 30
 	GameManager.bossLuck = 5.31459
